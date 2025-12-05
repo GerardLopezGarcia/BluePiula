@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Prince - Selector de Habitaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SELECT A ROOM TO DRAFT</h1>
+        </header>
+
+        <div class="selection-area">
+            <div class="rooms-container" id="roomsContainer">
+                <!-- Las imágenes se generarán dinámicamente aquí -->
+            </div>
+        </div>
+
+        <div class="steps-display">
+            <div class="steps-logo">
+                <img src="assets/steps.png" alt="Steps">
+            </div>
+            <div class="steps-counter">
+                <span class="steps-label">Steps</span>
+                <span class="steps-number" id="stepsCount">0</span>
+            </div>
+            <div class="gem-logo" id="gemLogo" title="Consulta la pista">
+                <img src="assets/gem.png" alt="Gem" />
+            </div>
+        </div>
+        <div class="keys-row" id="keysRow"></div>
+
+        <!-- Modal de consulta -->
+        <div class="intro-modal" id="introModal">
+            <div class="intro-modal-bg" id="introModalBg"></div>
+            <img src="assets/intro.png" alt="Intro" class="intro-img" />
+        </div>
+
+        <button class="reset-btn" id="resetBtn">Reiniciar</button>
+    </div>
+
+    <audio id="bg-music" src="bluePrince.mp3" autoplay loop></audio>
+
+    <!-- Pantalla de fin del juego -->
+    <div class="ending-overlay" id="endingOverlay">
+        <div class="ending-content">
+            <img src="assets/ending.png" alt="Game Over" class="ending-image">
+            <div class="ending-button-container">
+                <button class="ending-reset-btn" id="endingResetBtn">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pantalla de victoria -->
+    <div class="ending-overlay" id="winOverlay">
+        <div class="ending-content">
+            <img src="assets/win.png" alt="Victory" class="ending-image">
+            <div class="ending-button-container">
+                <button class="ending-reset-btn" id="winResetBtn">Reiniciar</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
